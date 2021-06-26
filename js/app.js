@@ -2,9 +2,9 @@
 let msg = {
    up : 'play',
    us : 'reset',
-  uWin: 'user win',
-  cWin: 'computer win',
-  tie : 'tie'
+  uWin: ' 🥳 user win',
+  cWin: ' 🤖 computer win',
+  tie : " 😱 tie"
   };
 
   let emoji = {
@@ -36,9 +36,9 @@ cScore.textContent = comScore;// computer score
 uScore.textContent = userScore;// user score
 bPlay.textContent = msg.up;//play btn
 bReset.textContent = msg.us;//reset btn
-gResult.textContent = msg.uWin;//game result
-selUsrImage.textContent = emoji.paper;//user select img
-selComImage.textContent = emoji.paper;// computer select img
+//gResult.textContent = msg.uWin;//game result
+//selUsrImage.textContent = emoji.paper;//user select img
+//selComImage.textContent = emoji.paper;// computer select img
 gRock.textContent = emoji.rock; // set rock img
 gPaper.textContent = emoji.paper; // set paper img
 gScissor.textContent = emoji.scissor; // set scissor img
@@ -49,8 +49,8 @@ bReset.style.display= 'none';
 
 const displayElement = (opt) => {
     gRock.disabled = opt;
-    gScissor.disbaled = opt;
-    gPaper.disbaled = opt;
+    gScissor.disabled = opt;
+    gPaper.disabled = opt;
 }
 
 displayElement(true);
@@ -65,25 +65,18 @@ bPlay.addEventListener('click', ()=> {
 })
 
 gRock.addEventListener('click', ()=> {
-    //console.log("rock");
     userSelect = 0;
-    //selUsrImage.textContent = emoji.rock;
-    console.log(userSelect);
     comapre();
 })
 
 gPaper.addEventListener('click', ()=> {
-    //console.log("rock");
     userSelect = 1;
-    //selUsrImage.textContent = emoji.rock;
-    console.log(userSelect);
+    comapre();
 })
 
 gScissor.addEventListener('click', ()=> {
-    //console.log("rock");
     userSelect = 2;
-    //selUsrImage.textContent = emoji.rock;
-    console.log(userSelect);
+    comapre();
 })
 
 
@@ -114,7 +107,7 @@ const comapre = () => {
     gResult.textContent = msg.cWin;
   }else if(userSelect === 2 && comSelect === 0){
     userScore =+1;
-    gResult.textContent = msg.uwin;
+    gResult.textContent = msg.uWin;
   }
 
   bPlay.style.display = 'block';
@@ -123,8 +116,7 @@ const comapre = () => {
   uScore.textContent = userScore;
   cScore.textContent = comScore;
 
-  console.log(uScore);
-  console.log(cScore);
+
 
 }
 
