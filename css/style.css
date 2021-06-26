@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Luckiest Guy', cursive; 
+    color:#fff;
+}
+/* background image */
+#body-bg{
+    background:url('../image/bg.jpg');
+    height:100vh;
+    background-position:center;
+    background-size:cover;
+}
+/* game title */
+.game-title h1{
+    font-size:3em;
+    text-transform:uppercase;
+    text-align:center;
+    letter-spacing: .5px;
+}
+/*game content */
+.game-details{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+}
+.game-content,
+.game-display{
+    text-align:center;
+}
+.game-display{
+    display:flex;
+    flex-direction:column;
+}
+.game-score,
+.game-win{
+    font-size:3em;
+}
+.game-text-lower{
+    font-size:1.2em;
+    margin:.2em 0;
+}
+.game-text-upper{
+    font-size:1.5em;
+    margin:.2em 0;
+}
+
+/*game-img */
+.game-image{
+    width:50%;
+}
+/*button */
+.btn{
+    font-size:1em;
+    font-weight:600;
+    text-transform:uppercase;
+    color:#3399FE;
+    background:#fff;
+    padding: 1.5em 5em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.btn-reset{
+    margin:2em 0;
+    padding:1.5em 1em;
+}
+/* game-play-img */
+.game-content-img{
+    display:flex;
+    justify-content:space-evenly;
+    padding-top:2em;
+    font-size:4em;
+}
+.game-content-img>img{
+    padding:3em;
+    
+}
